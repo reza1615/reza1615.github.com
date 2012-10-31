@@ -16,6 +16,8 @@
         <div id="content">
             <div class="label">The sample text:</div>
             <textarea id="inputText">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</textarea>
+            <div class="label">Box for tesseract-ocr!:</div>
+            <textarea id="boxes" dir="ltr"></textarea>
             <br />
             <div class="label">Font:</div>
             <input id="font" value="arial" />
@@ -25,13 +27,9 @@
                 <option value="italic">Italic</option>
                 <option value="bold italic">Bold + Italic</option>
             </select>
-            <br />
             Font size:
             <input type="number" value="24" id="fontSize" />px
-                <br />
-            Scale of image:
-            <input type="number" value="1" id="scale" />x
-                <br />
+                <br /><br />
             Shift1:
             <input type="number" value="0" id="ishift" />
             Shift2:
@@ -40,7 +38,7 @@
             <input type="number" value="0" id="iiishift" />
             Shift4:
             <input type="number" value="0" id="ivshift" />
-            <br />
+            <br /><br />
             <input type="checkbox" id="rtlMode" name="rtlMode" /><label for="rtlMode">RTL text</label>
             <br />
             <input type="checkbox" id="huge" name="huge" /><label for="huge">HUGE input text! (more than 10k words)</label>
@@ -62,8 +60,6 @@
             <br />
             Download: <a id="downloadPNG">Image</a> | <a id="downloadBOX">Box</a>
             <div id="page"></div>
-            <textarea id="boxes" dir="ltr"></textarea>
-
             <div id="canvasWrapper">
                 <canvas id="canvas"></canvas>
             </div>
