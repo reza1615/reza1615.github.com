@@ -84,7 +84,7 @@ var SamplePage = (function () {
         var pleft = this.page[0].offsetLeft;
         var pheight = this.page[0].offsetHeight;
         var pwidth = this.page[0].offsetWidth;
-        var scale = $('#scale').val();
+        var scale = 1;
         var huge = ($('#huge')[0]).checked;
         if(!huge) {
             var canvas = document.getElementById('canvas');
