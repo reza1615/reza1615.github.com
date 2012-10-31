@@ -15,49 +15,47 @@
 
         <div id="content">
             <div class="label">متن:</div>
-            <textarea id="inputText">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</textarea>
+            <textarea id="inputText">لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ زمانی لازم بود شرایطی شما باید فکر ثبت نام و طراحی، لازمه خروج می باشد. در ضمن قاعده همفکری ها جوابگوی سئوالات زیاد شاید باشد، آنچنان که لازم بود طراحی گرافیکی خوب بود. کتابهای زیادی شرایط سخت ، دشوار و کمی در سالهای دور لازم است. هدف از این نسخه فرهنگ پس از آن و دستاوردهای خوب شاید باشد. حروفچینی لازم در شرایط فعلی لازمه تکنولوژی بود که گذشته، حال و آینده را شامل گردد. سی و پنج درصد از طراحان در قرن پانزدهم میبایست پرینتر در ستون و سطر حروف لازم است، بلکه شناخت این ابزار گاه اساسا بدون هدف بود و سئوالهای زیادی در گذشته بوجود می آید، تنها لازمه آن بود. </textarea>
             <br />
             <div class="label">فونت:</div>
             <input id="font" value="arial" />
             <select id="style">
-                <option value="">Normal</option>
-                <option value="bold">Bold</option>
-                <option value="italic">Italic</option>
-                <option value="bold italic">Bold + Italic</option>
+                <option value="">ساده</option>
+                <option value="bold">پررنگ</option>
+                <option value="italic">ایتالیک</option>
+                <option value="bold italic">ایتالیک+پررنگ</option>
             </select>
             <br />
             اندازه فونت:
             <input type="number" value="20" id="fontSize" />px
                 <br />
-            Shift1:
+            جابجایی ستون 1:
             <input type="number" value="0" id="ishift" />
-            Shift2:
+            جابجایی ستون 2:
             <input type="number" value="0" id="iishift" />
-            Shift3:
+            جابجایی ستون 3:
             <input type="number" value="0" id="iiishift" />
-            Shift4:
+            جابجایی ستون 4:
             <input type="number" value="0" id="ivshift" />
             <br />
-            <input type="checkbox" id="rtlMode" name="rtlMode" /><label for="rtlMode">RTL text</label>
+            <input type="checkbox" id="rtlMode" checked="checked" name="rtlMode" /><label for="rtlMode">متن راست به چپ</label>
             <br />
-            <input type="checkbox" id="huge" checked="checked" name="huge" /><label for="huge">HUGE input text! (more than 10k words)</label>
+            <input type="checkbox" id="huge" checked="checked" name="huge" /><label for="huge">متن طولانی (بیش از ۱۰ هزار کلمه)</label>
             <br />
-            <input type="checkbox" id="extraSpace" name="extraSpace" /><label for="extraSpace">Extra space!</label>
+            <input type="checkbox"  id="letterByLetter" name="letterByLetter" /><label for="letterByLetter">حرف به حرف</label>
             <br />
-            <input type="checkbox"  id="letterByLetter" name="letterByLetter" /><label for="letterByLetter">Letter by letter</label>
+            <input type="checkbox" id="removeZwj" name="removeZwj" /><label for="removeZwj">حذف فاصله مجازی از جعبه</label>
             <br />
-            <input type="checkbox" id="removeZwj" name="removeZwj" /><label for="removeZwj">Remove the ZWJs from boxes</label>
-            <br />
-            Space between the letters:
+            فاصله میان حروف:
             <input type="number" value="10" id="letterSpacing" />px
                 <br />
-            Height of the lines:
+            فاصله خط‌ها:
             <input type="number" value="40" id="lineHeight" />px
                 <br />
-            <button id="button">Update!</button>
+            <button id="button">بروزرسانی!</button>
             <br />
             <br />
-            Download: <a id="downloadPNG">Image</a> | <a id="downloadBOX">Box</a>
+            دانلود: <a id="downloadPNG">تصویر</a> | <a id="downloadBOX">جعبه</a>
             <div id="page"></div>
             <textarea id="boxes" dir="ltr"></textarea>
 
