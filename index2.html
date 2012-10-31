@@ -26,13 +26,15 @@
                 <option value="italic">Italic</option>
                 <option value="bold italic">Bold + Italic</option>
             </select>
-            Font size:
+            <B>Font size:</B>
             <input type="number" value="24" id="fontSize" />px
-            Space between the letters:
+            <B>Space between the letters:</B>
             <input type="number" value="10" id="letterSpacing" />px
-            Height of the lines:
+            <B>Height of the lines:</B>
             <input type="number" value="40" id="lineHeight" />px
-                <br /><br />
+                <br />
+            <B>Calibrating Boxs' cordinations:</B>
+            <br />
             Shift1:
             <input type="number" value="0" id="ishift" />
             Shift2:
@@ -41,11 +43,8 @@
             <input type="number" value="0" id="iiishift" />
             Shift4:
             <input type="number" value="0" id="ivshift" />
-            <br /><br />
-            <input type="checkbox" id="huge" name="huge" /><label for="huge">HUGE input text! (more than 10k words)</label>
             <br />
             <hr width="75%">
-            <br />
             <input type="checkbox" id="rtlMode" name="rtlMode" /><label for="rtlMode">RTL text</label>
             <br />
             <input type="checkbox"  id="letterByLetter" name="letterByLetter" /><label for="letterByLetter">Letter by letter</label>
@@ -53,6 +52,8 @@
             <input type="checkbox" id="removeZwj" name="removeZwj" /><label for="removeZwj">Remove the ZWJs from boxes</label>
             <br />
             <button id="button">Update!</button>
+            <br />
+            <input type="checkbox" id="huge" name="huge" /><label for="huge">HUGE input text! (more than 10k words)</label>
             <br />
             Download: <a id="downloadPNG">Image</a> | <a id="downloadBOX">Box</a>
             <div id="page"></div>
@@ -63,6 +64,6 @@
             <div id="imagePlaceHolder"></div>
         </div>
     </div>
-    <input type="checkbox" id="extraSpace" name="extraSpace" /><label for="extraSpace"></label>
+    <input type="checkbox" id="extraSpace" name="extraSpace" style="display:none;/><label for="extraSpace"></label>
 </body>
 </html>
