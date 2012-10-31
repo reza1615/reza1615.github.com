@@ -24,6 +24,7 @@ var SamplePage = (function () {
         var id = 0;
         var nextMustJoined = false;
         sb.push('<p>');
+        var extraSpace = ($('#extraSpace')[0]).checked ? ' ' : '';
         var letterByLetter = ($('#letterByLetter')[0]).checked;
         for(var i = 0; i < chars.length; i++) {
             var char = chars[i];
@@ -61,6 +62,7 @@ var SamplePage = (function () {
                     }
                     isb.push('</span>');
                     sb.push(isb.join(''));
+                    sb.push(extraSpace);
                 }
             }
         }
