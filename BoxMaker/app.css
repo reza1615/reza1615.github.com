@@ -1,0 +1,54 @@
+﻿body {
+    font-family: 'Segoe UI', 'Tahoma', sans-serif;
+}
+
+#wrapper {
+    background-color: white;
+}
+
+.tahoma {
+    font-family: Tahoma;
+}
+
+.arial {
+    font-family: arial;
+}
+
+.nazli {
+    font-family: Nazli;
+}
+
+#inputText, #boxes {
+    width: 600px;
+    height: 200px;
+}
+
+.bold {
+    height: 200px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+p {
+    margin: 0;
+}
+
+#canvas {
+    display: none;
+}
+
+input[type=number] {
+    width: 40px;
+}
+
+#page {
+    border: 1px solid black;
+    padding: 5px;
+}
+
