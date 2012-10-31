@@ -144,7 +144,6 @@ var SamplePage = (function () {
             var boxDownload = document.getElementById('downloadBOX');
             boxDownload.setAttribute('download', "LANG." + fontFileName + ".exp0.box");
             boxDownload.setAttribute('href', 'data:text/plain;charset=utf-8,' + boxes.replace(/\n/g, "%0A"));
-            $('#imagePlaceHolder').empty().append(Canvas2Image.convertToImage(canvas));
         }
     };
     return SamplePage;
