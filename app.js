@@ -85,22 +85,19 @@ var SamplePage = (function () {
         var pheight = this.page[0].offsetHeight;
         var pwidth = this.page[0].offsetWidth;
         var scale = 1;
-        var huge = ($('#huge')[0]).checked;
-        if(!huge) {
-            var canvas = document.getElementById('canvas');
-            canvas.height = pheight * scale;
-            canvas.width = pwidth * scale;
-            var context = canvas.getContext('2d');
-            context.fillStyle = 'white';
-            context.fillRect(0, 0, canvas.width, canvas.height);
-            context.textBaseline = 'bottom';
-            context.fillStyle = 'black';
-        }
+        var canvas = document.getElementById('canvas');
+        canvas.height = pheight * scale;
+        canvas.width = pwidth * scale;
+        var context = canvas.getContext('2d');
+        context.fillStyle = 'white';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.textBaseline = 'bottom';
+        context.fillStyle = 'black';
+
         var fontpx = parseInt(getComputedStyle(elements[0]).getPropertyValue('font-size')) * scale;
         var pageClasses = this.page[0].getAttribute('class');
-        if(!huge) {
-            context.font = $('#style').val() + ' ' + fontpx + 'px ' + $('#font').val();
-        }
+        context.font = $('#style').val() + ' ' + fontpx + 'px ' + $('#font').val();
+
         var ishift = parseInt($('#ishift').val());
         var iishift = parseInt($('#iishift').val());
         var iiishift = parseInt($('#iiishift').val());
@@ -123,28 +120,22 @@ var SamplePage = (function () {
             sb.push(((pheight - top) * scale) + ivshift);
             sb.push(' 0');
             sb.push('\n');
-            if(!huge) {
-                var lleft = direction === 'ltr' ? left : left + width;
-                context.fillText(elcontent, lleft * scale, (top + height) * scale);
-            }
+            var lleft = direction === 'ltr' ? left : left + width;
+            context.fillText(elcontent, lleft * scale, (top + height) * scale);
         }
-        if(!huge) {
-            context.save();
-        }
+        context.save();
         var boxes = sb.join('');
         if(($('#removeZwj')[0]).checked) {
             boxes = boxes.replace(/\u200d/g, "");
         }
         $('#boxes').val(boxes);
         var fontFileName = $('#font').val() + $('#style').val().replace(" ", "");
-        if(!huge) {
-            var pngDownload = document.getElementById('downloadPNG');
-            pngDownload.setAttribute('download', "LANG." + fontFileName + ".exp0.png");
-            pngDownload.setAttribute('href', canvas.toDataURL("image/png"));
-            var boxDownload = document.getElementById('downloadBOX');
-            boxDownload.setAttribute('download', "LANG." + fontFileName + ".exp0.box");
-            boxDownload.setAttribute('href', 'data:text/plain;charset=utf-8,' + boxes.replace(/\n/g, "%0A"));
-        }
+        var pngDownload = document.getElementById('downloadPNG');
+        pngDownload.setAttribute('download', "LANG." + fontFileName + ".exp0.png");
+        pngDownload.setAttribute('href', canvas.toDataURL("image/png"));
+        var boxDownload = document.getElementById('downloadBOX');
+        boxDownload.setAttribute('download', "LANG." + fontFileName + ".exp0.box");
+        boxDownload.setAttribute('href', 'data:text/plain;charset=utf-8,' + boxes.replace(/\n/g, "%0A"));
     };
     return SamplePage;
 })();
