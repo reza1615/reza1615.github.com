@@ -102,6 +102,7 @@ var SamplePage = (function () {
         var iishift = parseInt($('#iishift').val());
         var iiishift = parseInt($('#iiishift').val());
         var ivshift = parseInt($('#ivshift').val());
+        var pagenum = parseInt($('#pagenum').val());
         for(var i in elements) {
             var el = elements[i];
             var elcontent = parts[el.getAttribute('uid')];
@@ -118,7 +119,8 @@ var SamplePage = (function () {
             sb.push(((left + width) * scale) + iiishift);
             sb.push(' ');
             sb.push(((pheight - top) * scale) + ivshift);
-            sb.push(' 0');
+            sb.push(' ');
+            sb.push(pagenum);
             sb.push('\n');
             var lleft = direction === 'ltr' ? left : left + width;
             context.fillText(elcontent, lleft * scale, (top + height) * scale);
